@@ -8,13 +8,13 @@ WORKDIR /app/nginx
 COPY nginx/conf.d/default.conf /app/nginx/
 # c) Install app dependencies
 COPY package.json package-lock.json /app/
-RUN cd /app && npm set progress=false && rm package-lock.json && npm install
+RUN cd /app && npm set progress=false && npm install
 # d) Copy project files into the docker image and build your app
 COPY .  /app
 
 #RUN cd /app/node_modules/admin-lte/plugins/overlayScrollbars/css && ls
 #RUN cd /app && npm install admin-lte@^3.1 && npm run ng build 
-RUN cd /app && npm run ng build --prod
+RUN cd /app && ls && npm run ng build --prod
 
 # STEP 2 build a small nginx image
 FROM nginx:alpine
