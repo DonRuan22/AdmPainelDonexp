@@ -12,7 +12,7 @@ RUN cd /app && npm set progress=false && npm install
 # d) Copy project files into the docker image and build your app
 COPY .  /app
 
-RUN cd /app/node_module/admin-lte && ls
+RUN cd /app/node_module && ls
 #RUN cd /app && ls && npm run ng build --prod
 # STEP 2 build a small nginx image
 FROM nginx:alpine
