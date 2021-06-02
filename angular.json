@@ -38,6 +38,7 @@
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css",
+              "node_modules/admin-lte/plugins/overlayScrollbars/css/overlayScrollbars.css",
               "node_modules/admin-lte/dist/css/adminlte.css"
             ],
             "scripts": ["node_modules/admin-lte/plugins/jquery/jquery.js",
