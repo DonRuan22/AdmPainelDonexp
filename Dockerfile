@@ -20,7 +20,7 @@ FROM nginx:alpine
 # a) Remove default nginx code
 RUN rm -rf /usr/share/nginx/html/*
 # b) From 'builder' copy your site to default nginx public folder
-COPY --from=builder /app/dist/frontend /usr/share/nginx/html
+COPY --from=builder /app/dist/adminLTE-app /usr/share/nginx/html
 # c) copy your own default nginx configuration to the conf folder
 RUN rm -rf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
