@@ -13,8 +13,8 @@ RUN cd /app && npm set progress=false && npm install
 COPY .  /app
 
 #RUN cd /app/node_modules/admin-lte/plugins/overlayScrollbars/css && ls
-#RUN cd /app && ls && npm run ng build --prod
-RUN ls && npm run ng build --prod
+RUN cd /app && ls && npm run ng build --prod
+
 # STEP 2 build a small nginx image
 FROM nginx:alpine
 # a) Remove default nginx code
